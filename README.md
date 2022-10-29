@@ -1,5 +1,5 @@
 ---
-title: "Handy repo for my attemps and solutions at leetcode problems"
+title: "Handy repo for my attempts and solutions at leetcode problems"
 author: Derek Lee Nen That
 date: 29 October 2022
 ---

@@ -51,7 +51,7 @@ class Solution:
     Runtime = 455 ms
     Mem Usage = 26.1 MB
 
-    - Since sets remove any duplicateds, simply convert the list into a set and check if length is the same
+    - Since sets remove any duplicates, simply convert the list into a set and check if length is the same
     - Use != since method should:
         return True when there are duplicates 
         return False when everything is distinct

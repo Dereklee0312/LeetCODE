@@ -1,4 +1,9 @@
 """
+Author: Derek Lee
+Date Started: 30 Oct 2022
+Date Solved: 30 Oct 2022
+Link: https://leetcode.com/problems/palindrome-number/
+
 Qu 9. Palindrome number
 Given an integer x, return true if x is a palindrome, and false otherwise.
 

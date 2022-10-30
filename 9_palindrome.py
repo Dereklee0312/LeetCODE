@@ -27,6 +27,7 @@ Constraints:
 -2^31 <= x <= 2^31 - 1
 """
 
+
 class Solution:
     """
     Solution 1:

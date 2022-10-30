@@ -63,8 +63,19 @@ class Solution:
     Solution 3:
 
     Attempt to solve it without converting to string
+    Runtime = 81 ms
+    Mem Use = 13.8 MB
 
+    1) Invert the number by using an algorithm found on: 
+       https://www.programiz.com/python-programming/examples/reverse-a-number
 
+       - Get last digit by using modulo operator with 10 (divide by 10 and take remainder)
+       - Add last digit to reversed number which has been multiplied by 10 to accommodate new number
+       - Remove last digit of original number by using floor division with 10 (Round down result of division)
+
+    2) Check if inverted value is same as original
+    
+    TODO: Optimize the inverting process
     """
 
     def isPalindrome2(self, x: int) -> bool:

@@ -63,7 +63,7 @@ class Solution:
     Solution 3:
 
     Attempt to solve it without converting to string
-    Runtime = 81 ms
+    Runtime = 77 ms
     Mem Use = 13.8 MB
 
     1) Invert the number by using an algorithm found on: 
@@ -83,8 +83,7 @@ class Solution:
             reversed = 0
             x1 = x
             while x1 != 0:
-                digit = x1 % 10
-                reversed = reversed * 10 + digit
+                reversed = (reversed * 10) + (x1 % 10)
                 x1 //= 10
 
             if reversed == x:

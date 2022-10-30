@@ -24,6 +24,20 @@ class Solution:
     '''
     Solution 2:
 
-    Second attempt - Try to solve it without changing to string
+    Second attempt - Make it faster
+    Runtime = 104 ms
+    Mem Use = 14 MB
+
+    Simply convert first solution to a 1 liner by using string indexing instead of a loop
     '''
     def IsPalindrome(self, x: int) -> bool:
+        return str(x) == str(x)[::-1]
+
+
+    '''
+    Solution 3:
+
+    Attempt to solve it without converting to string
+
+
+    '''

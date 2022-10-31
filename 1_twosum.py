@@ -1,7 +1,7 @@
 """
 Author: Derek Lee
 Date Started: 31 Oct 2022
-Date Completed:
+Date Completed: 31 Oct 2022
 Link: https://leetcode.com/problems/two-sum/
 
 Qu 1. Two Sum

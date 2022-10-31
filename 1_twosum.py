@@ -79,9 +79,36 @@ class Solution:
     def twoSum2(self, nums: List[int], target: int) -> List[int]:
         """
         Solution 3:
+        Runtime: 124 ms
+        Mem Use: 15.2 MB
+
+        Still uses a loop, but uses a dictionary instead of the list method, index
+
+        Reason why dictionary is much faster than list is because dictionary uses hash tables and the average lookup time
+        is O(1) whereas a list is iterative.
+        Source: https://stackoverflow.com/questions/38927794/python-dictionary-vs-list-which-is-faster
+
+        Explanation of solution:
+        - Uses almost same logic as sol 2
+        - Iterate through list of numbers with enumerate to get index simultaneously
+        - Find remainder 
+        - Check if remainder is in dictionary
+            -> True, Return list of indexes 
+            -> False, Add new value & index to dictionary
+
+        NOTE: Only add the new value to dictionary if the remainder is not in the dictionary to bypass checking if index is repeating
+              That is, for each new iteration, if the remainder for the current iteration is in the dictionary, there is no way
+              that it would be the same index as the current iteration as it has not been added yet.
+
+              Reason why the value is used as key instead of index is to retrieve the index based on the value.
         """
 
         dict = {}
 
         for index, value in enumerate(nums):
+            remainder = target - value
 
+            if (remainder in dict):
+                return [index, dict[remainder]]
+
+            dict[value] = index

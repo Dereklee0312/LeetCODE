@@ -59,19 +59,29 @@ class Solution:
                         return [i, j]
 
     def twoSum1(self, nums: List[int], target: int) -> List[int]:
-        '''
+        """
         Solution 2:
         Runtime: 1617 ms
         Mem Use: 14.9 MB
 
         Still uses a loop, but more efficient since only one loop and condition is used.
 
-        Reverse logic is used: 
+        Reverse logic is used:
         - For each number in list, find the remainder when substracting from target
         - Condition checks if the remainder is in the list and check if index of remainder is not same as first number
         - Return list of the indexes if conditions are satisfied
-        '''
+        """
         for h, i in enumerate(nums):
-            secondNum = target - i
-            if (secondNum in nums) and (nums.index(secondNum) != h):
-                return [h, nums.index(secondNum)]
+            remainder = target - i
+            if (remainder in nums) and (nums.index(remainder) != h):
+                return [h, nums.index(remainder)]
+
+    def twoSum2(self, nums: List[int], target: int) -> List[int]:
+        """
+        Solution 3:
+        """
+
+        dict = {}
+
+        for index, value in enumerate(nums):
+

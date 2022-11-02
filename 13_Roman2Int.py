@@ -49,7 +49,10 @@ Constraints:
 s contains only the characters ('I', 'V', 'X', 'L', 'C', 'D', 'M').
 It is guaranteed that s is a valid roman numeral in the range [1, 3999].
 """
+
+
 class Solution:
+
     """
     Sol 1:
     Runtime: 45 ms
@@ -63,22 +66,23 @@ class Solution:
     - First loop removes the exceptions from the string and adds to value
     - Second loop adds to value according to remaining numerals
     """
+
     def romanToInt(self, s: str) -> int:
         exceptions = {"IV": 4, "IX": 9, "XL": 40, "XC": 90, "CD": 400, "CM": 900}
-        
+
         regular = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
-        
+
         value = 0
-        
+
         toRemove = [x for x in exceptions.keys() if x in s]
-        
+
         for i in toRemove:
             value += exceptions[i]
-            s = s.replace(i,"")
-        
+            s = s.replace(i, "")
+
         for j in s:
             value += regular[j]
-        
+
         return value
 
     def romanToInt1(self, s: str) -> int:

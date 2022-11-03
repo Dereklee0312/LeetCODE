@@ -52,7 +52,6 @@ It is guaranteed that s is a valid roman numeral in the range [1, 3999].
 
 
 class Solution:
-
     """
     Sol 1:
     Runtime: 45 ms
@@ -90,6 +89,8 @@ class Solution:
         Sol 2:
         Runtime: 107 ms
         Mem Use: 14 MB
+
+        Very slow as it requires a lot of computation and has 3 conditions to check for each iteration
         """
 
         romans = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}

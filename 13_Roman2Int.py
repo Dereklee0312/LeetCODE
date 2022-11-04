@@ -91,6 +91,13 @@ class Solution:
         Mem Use: 14 MB
 
         Very slow as it requires a lot of computation and has 3 conditions to check for each iteration
+        - Create a dictionary with all the numerals and their value
+        - Iterate through the string in reverse order
+        - Check if the next value is less than the current value
+            - If value is less, subtract to total and add index to characters to be skipped
+        - Check if current index is none as a roman numeral may not contain any exceptions
+        - Check if current index is not the one to be skipped
+            - If not, add value to total
         """
 
         romans = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}

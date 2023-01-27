@@ -37,10 +37,10 @@
 
 class Solution:
     def replaceElements(self, arr: List[int]) -> List[int]:
-        try:
-            curMax = max(arr[1:])
-        except:
-            curMax = arr[0]
+        if len(arr) == 1:
+            return [-1]
+
+        curMax = max(arr[1:])
 
         for i in range(len(arr)):
             if i + 1 != len(arr):

@@ -32,6 +32,18 @@
 
 class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
+        '''
+        Solution 1:
+        Runtime: 32 ms
+        Mem Usage: 13.9 MB
+
+        - Focuses on finding the index of the occurrence of the chars from `s` in `t`
+        - Checks if the order is correct to ensure it is a subsequence
+        - Reverse the strings to remove need to check whether the first occurrence of the character needs to be discarded
+            - Ex: s = 'ab'  t = 'baab'
+            - If not reversed, b's index would be 0 and thus would not be considered a substring as a's index would be 1
+            - Another check would be required to ensure all occurrences of a letter is considered
+        '''
         indLst = []
         t = t[::-1]
 

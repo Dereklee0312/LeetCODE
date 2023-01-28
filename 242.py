@@ -32,4 +32,11 @@
 
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
+        '''
+        Solution 1:
+        Runtime: 77 ms
+        Mem Usage: 15.7 MB
+
+        - Simply check if s and t contain the same characters
+        '''
         return sorted(list(s)) == sorted(list(t))

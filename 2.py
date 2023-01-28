@@ -42,26 +42,53 @@ class ListNode:
         self.next = next
 
 class Solution:
+    '''
+    Solution 2:
+    Runtime: 77 ms
+    Mem Usage: 13.9 MB
+
+    - Generate the numbers with `createNum`
+    - Return LinkedList with `createLinkedLst`
+    '''
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
         num1 = self.createNum(l1)
         num2 = self.createNum(l2)
+
         return self.createLinkedLst(num1 + num2)
 
     def createNum(self, lst) -> int:
+        """
+        lst: Head of LinkeList
+        Return: reversed number (int)
+
+        - Iterate through linked list and append each number to a string.
+        - Convert reversed string to int
+        """
         curVal = lst.val
         num = str(curVal)
+
         while lst.next != None:
             curVal = lst.next.val
             num += str(curVal)
             lst = lst.next
-        print(num)
 
         return int(num[::-1])
 
     def createLinkedLst(self, number) -> ListNode:
+        """
+        number: int
+        Return: Head of LinkedList
+
+        - Reverse order of number
+        - Create Head Node from first number and keep reference of Head
+        - Iterate through remaining reversed numbers and sequentially link each node
+        """
         number = str(number)[::-1]
         curNode = ListNode(int(number[0]))
+
+        # Keep reference to firstNode
         firstNode = curNode
+
         for num in (number[1:]):
             curNode.next = ListNode(int(num))
             curNode = curNode.next

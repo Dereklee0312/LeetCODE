@@ -37,6 +37,20 @@
 
 class Solution:
     def replaceElements(self, arr: List[int]) -> List[int]:
+        '''
+        Solution 1:
+        Runtime: 804 ms
+        Mem Usage: 15.6 MB
+
+        - If arr contains only one element, automatically swapped with -1 as no element on the right
+        - With more than one element, find the max to the right of first element
+        - Enter loop and start swapping current number with max, until max number is reached within the iteration
+            - Find new max, then swap again
+        - When reaching last element, automatically swap with -1
+
+        NOTE:
+            Simply finding the max value to the right for each iteration is possible but would exceed runtime constraints
+        '''
         if len(arr) == 1:
             return [-1]
 

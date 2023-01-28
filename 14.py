@@ -26,6 +26,21 @@ strs[i] consists of only lowercase English letters.
 
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
+        '''
+        Solution 1:
+        Runtime: 40 ms
+        Mem Usage: 14 MB
+
+        NOTE:
+            min, max functions can take an additional paramenter, key to specify which property to use when sorting
+
+        - Find shortest string (SS) from list
+        - Iterate through SS with an index anchor
+            - For each iteration, Iterate through list of strings
+                - Check if character at current index of each string == character of current iteration
+            - If Characters do not correspond, break from loops
+            - Else, add characters to common string
+        '''
         shortestStr = min(strs, key=len)
 
         common = ""

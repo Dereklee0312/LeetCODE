@@ -32,7 +32,7 @@
 
 class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
-        '''
+        """
         Solution 1:
         Runtime: 32 ms
         Mem Usage: 13.9 MB
@@ -43,7 +43,7 @@ class Solution:
             - Ex: s = 'ab'  t = 'baab'
             - If not reversed, b's index would be 0 and thus would not be considered a substring as a's index would be 1
             - Another check would be required to ensure all occurrences of a letter is considered
-        '''
+        """
         indLst = []
         t = t[::-1]
 
@@ -56,3 +56,24 @@ class Solution:
                 return False
 
         return sorted(indLst) == indLst
+
+    def isSubsequence1(self, s, t):
+        '''
+        Solution 2:
+        Runtime: 31 ms
+        Mem Usage: 13.8 MB
+
+        NeetCode solution
+        - Basically uses 2 pointers `L` for `s` and `R` for `t`
+        - Increment L pointer only when both point to same character
+        - Increment R if pointer point to same character so as to eliminate char from subsequence
+        - Increment R if pointer does not point to same character to check next char
+        '''
+        i, j = 0, 0
+
+        while i < len(s) and j < len(t):
+            if s[i] == t[j]:
+                i += 1
+            j += 1
+
+        return True if i == len(s) else False

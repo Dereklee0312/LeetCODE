@@ -37,6 +37,7 @@
 # There is exactly one island in grid.
 
 
+# TODO: Add solution explanation
 class Solution:
     def islandPerimeter(self, grid: List[List[int]]) -> int:
         offsets = [[0, 1], [0, -1], [1, 0], [-1, 0]]

@@ -1,6 +1,6 @@
 // Author: Derek Lee
 // Start Date: 30-04-2023
-// End Date:
+// End Date: 30-04-2023
 // Link: https://leetcode.com/problems/baseball-game/
 // Difficulty: Easy
 

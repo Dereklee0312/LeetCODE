@@ -1,3 +1,4 @@
+# LINK: https://www.algoexpert.io/questions/smallest-difference
 def smallestDifference(arrayOne, arrayTwo):
     arrayOne.sort()
     arrayTwo.sort()
